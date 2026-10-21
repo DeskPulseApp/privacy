@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DeskPulse Privacy Policy</title>
-<meta name="description" content="How the DeskPulse app handles your data: everything stays on your phone.">
+<meta name="description" content="How the DeskPulse app handles your data: on your phone by default, saved to your account only if you choose to sign in.">
 <style>
   :root { --bg: #0b0b0b; --card: #161616; --text: #f2f2f2; --sub: #a8a8a8; --line: #2a2a2a; --accent: #ff5722; }
   @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #fafafa; --card: #ffffff; --text: #161616; --sub: #555; --line: #e4e4e4; } }
@@ -24,7 +24,7 @@
   th { color: var(--sub); font-weight: 600; font-size: 13px; }
   a { color: var(--accent); }
   .lang { display: flex; gap: 8px; margin: 18px 0 6px; }
-  .lang button { background: var(--card); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 14px; cursor: pointer; }
+  .lang button { background: var(--card); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 14px; cursor: pointer; min-height: 36px; }
   .lang button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
   [hidden] { display: none !important; }
   .scroll { overflow-x: auto; }
@@ -38,27 +38,49 @@
     <button type="button" data-lang="ar" aria-pressed="false">العربية</button>
   </div>
 
-  <article id="en" lang="en" dir="ltr">
-    <p class="muted">Updated for version 1.1 · Effective date: October 17, 2026 · Applies to the DeskPulse app for Android and iOS</p>
+    <article id="en" lang="en" dir="ltr">
+    <p class="muted">Updated for version 1.4 · Effective date: <span class="eff">October 21, 2026</span> · Applies to the DeskPulse app for Android and iOS</p>
 
-    <div class="card"><strong>The short version:</strong> DeskPulse keeps everything on your phone. We have no servers, no accounts, no ads and no analytics. We never sell, share or upload your data.</div>
+    <div class="card"><strong>The short version:</strong> Signing in is optional. Without it, everything stays on your phone, as before. If you sign in with Google, your progress is saved to your DeskPulse account so you can carry on on another phone. We have no ads and no analytics, and we never sell or share your data.</div>
 
-    <h2>What DeskPulse stores, and where</h2>
-    <p>All data is saved only in the app's private storage on your device:</p>
+    <h2>What DeskPulse stores on your phone</h2>
+    <p>Whether or not you sign in, the app keeps your data in its private storage on your device:</p>
     <div class="scroll"><table>
       <tr><th>Data</th><th>Why</th></tr>
-      <tr><td>Your movement breaks (time, length, exercises, estimated calories, steps during the break)</td><td>To show your history, streaks, badges and progress</td></tr>
+      <tr><td>Your movement breaks (time, length, exercises, estimated calories, steps during the break)</td><td>To show your history, streak, XP, badges and progress</td></tr>
       <tr><td>Profile you enter: name, weight, height, age, sex (all optional)</td><td>To estimate calories burned more accurately</td></tr>
-      <tr><td>Settings: reminder mode and interval, work hours and days, language</td><td>To remind you at the right time</td></tr>
-      <tr><td>Reminder history (shown, snoozed, started)</td><td>To time reminders and show your stats</td></tr>
+      <tr><td>Settings: reminder mode and interval, work hours and days, language, Pulse's looks</td><td>To remind you at the right time and show your Pulse</td></tr>
+      <tr><td>Reminder history (shown, snoozed, started), Streak Shields, Relief program days</td><td>To time reminders and show your stats</td></tr>
     </table></div>
+
+    <h2>If you sign in (optional)</h2>
+    <p>You can sign in with Google from Settings or when you start the free week. Then DeskPulse also saves the following to your DeskPulse account, so it can come back on this or another phone:</p>
+    <div class="scroll"><table>
+      <tr><th>Data</th><th>Why</th></tr>
+      <tr><td>From your Google account: your name, email address and a Google account id</td><td>To create your DeskPulse account and recognise you when you sign in</td></tr>
+      <tr><td>Your breaks and history (time, length, exercises, time-based calorie estimate), XP, streak, badges, Streak Shields, Relief program progress, Pulse's looks and room, reminder history, your profile and settings. Nothing that comes from Health Connect or Apple Health is included: step counts, calories worked out from steps, and walks DeskPulse credited from your steps stay on your phone.</td><td>To keep your progress safe and let you carry on on another phone</td></tr>
+      <tr><td>Phones using your account: a random id made by the app, the phone's brand and model code (for example "HONOR phone (MBH-N49)") and when it last saved. Never your phone's own name.</td><td>To show "Phones using this account"</td></tr>
+    </table></div>
+    <ul>
+      <li><b>Where:</b> your account is stored with our database provider, Supabase, on servers in Ireland (EU). Data is encrypted in transit (HTTPS). Each account can only read its own data.</li>
+      <li><b>How long:</b> until you delete your account (see "Deleting your data" below).</li>
+      <li><b>Signing out</b> keeps your progress on the phone and stops saving it to your account.</li>
+    </ul>
+
+    <h2>The 7-day free week of Pro</h2>
+    <p>Each account and each phone gets one free week. Starting it needs sign-in. To check the phone, DeskPulse uses two values that are not your phone's hardware number:</p>
+    <ul>
+      <li>a random id made by the app and kept in Google's Block Store on your phone, and</li>
+      <li>a one-way scrambled form of Android's app-specific phone id. The phone id itself never leaves your phone; it cannot be turned back from the scrambled form.</li>
+    </ul>
+    <p>When the free week starts, these two values and the start and end dates are saved with your account. If you later delete your account, only the scrambled phone id and the day the free week started are kept, with no link to any account, so the same phone can't get a second free week. Nothing is charged when the free week ends.</p>
 
     <h2>Steps from Health Connect (Android) and Apple Health (iOS)</h2>
     <p>If you turn on step tracking, DeskPulse asks for permission to <b>read your step count</b>. It does not read any other health data and never writes to Health Connect or Apple Health.</p>
     <ul>
       <li>Steps are used only to confirm your walking breaks, to credit walks you took without the app, and to avoid reminding you right after you moved.</li>
       <li>If you allow background access, DeskPulse reads steps about every 15 minutes while it is closed, for the same purposes.</li>
-      <li>Step data stays on your device. It is never transferred to us or anyone else, never used for advertising, and never used to determine credit or insurance eligibility.</li>
+      <li>Step data stays on your device, also when you sign in. It is never transferred to us or anyone else, never used for advertising, and never used to determine credit or insurance eligibility.</li>
       <li>DeskPulse's use of information received from Health Connect adheres to the <a href="https://support.google.com/googleplay/android-developer/answer/12991134">Health Connect Permissions policy</a>, including the Limited Use requirements.</li>
     </ul>
 
@@ -69,26 +91,35 @@
     <p>If you turn on <b>meeting-aware nudges</b>, DeskPulse asks for read-only Calendar access. It reads only the <b>start and end times</b> of events marked busy, to hold a reminder until your meeting ends. It does not read event titles, descriptions, locations or attendees, and never stores, changes or shares calendar data. Turn the feature off or revoke the permission at any time.</p>
 
     <h2>Purchases (DeskPulse Pro)</h2>
-    <p>DeskPulse Pro is a one-time purchase handled entirely by Google Play. We never see or receive your payment details. The app only asks Google Play whether this Google account owns Pro, on your device, so your perks unlock.</p>
+    <p>DeskPulse Pro is a one-time purchase handled entirely by Google Play. We never see or receive your payment details. The app only asks Google Play whether your Google Play account owns Pro, on your device, so your perks unlock.</p>
 
     <h2>Notifications and alarms</h2>
-    <p>DeskPulse uses notifications for break reminders (and, with Pro, optional eye and posture check-ins), and the "Alarms &amp; reminders" permission so they arrive on time. These are scheduled on your device only.</p>
+    <p>DeskPulse uses notifications for break reminders (and, with Pro, optional eye and posture check-ins, and a reminder the day before a free week ends), and the "Alarms &amp; reminders" permission so they arrive on time. These are scheduled on your device only.</p>
 
     <h2>Home-screen widgets</h2>
-    <p>Widgets show your own progress from the app's local storage. Logging a break from a widget saves it in the same local storage.</p>
+    <p>Widgets show your own progress from the app's local storage. Logging a break from a widget saves it in the same local storage (and to your account, if you are signed in).</p>
+
+    <h2>Service providers</h2>
+    <ul>
+      <li><b>Supabase</b> stores the accounts and saved progress for us (Ireland, EU).</li>
+      <li><b>Google</b> provides sign-in, Google Play purchases and Block Store on your phone.</li>
+    </ul>
+    <p>They process data only to provide these services. We don't sell or share your data with anyone else.</p>
 
     <h2>What we don't do</h2>
     <ul>
-      <li>No account or sign-in is required.</li>
+      <li>No account is required: DeskPulse works fully without signing in.</li>
       <li>No advertising, tracking, analytics or crash-reporting SDKs.</li>
       <li>No location, contacts, camera, microphone or files access. Calendar is read only if you turn on meeting-aware nudges.</li>
-      <li>No data is sold or shared with third parties.</li>
+      <li>No data is sold or shared for advertising or any other purpose.</li>
     </ul>
 
-    <h2>Your control and deleting your data</h2>
+    <h2>Deleting your data</h2>
     <ul>
-      <li><b>Delete everything:</b> Profile → Reset everything, or uninstall the app. Deletion is immediate and permanent, since there is no copy anywhere else.</li>
-      <li><b>Export:</b> Profile → Backup data shares your data as a file you choose where to send.</li>
+      <li><b>Delete your account:</b> Settings › Your account › Delete my account. Your account and everything saved in it are deleted right away (except the scrambled phone id and free week day described above). What's on your phone stays. If you bought Pro, it stays linked to your Google Play account.</li>
+      <li><b>Can't open the app?</b> Email <a href="mailto:deskpulse.assistant@outlook.com">deskpulse.assistant@outlook.com</a> from the email address you signed in with, with the subject "Delete my DeskPulse account". We delete your account and all saved progress within 30 days. See <a href="https://deskpulseapp.github.io/delete-account/">deskpulseapp.github.io/delete-account</a>.</li>
+      <li><b>Delete what's on your phone:</b> Settings › Backup and privacy › Reset everything, or uninstall the app. If you are signed in, Reset everything signs you out first and your account keeps your progress.</li>
+      <li><b>Export:</b> Settings › Backup and privacy › Backup data shares your data as a file you choose where to send.</li>
       <li><b>Revoke permissions</b> any time in Health Connect, Apple Health or your phone's settings.</li>
     </ul>
 
@@ -99,33 +130,55 @@
     <p>DeskPulse offers general wellness reminders and estimates. It is not a medical device and does not give medical advice.</p>
 
     <h2>Changes</h2>
-    <p>If this policy changes, the updated version will be posted on this page with a new effective date. If a future version adds features such as sign-in or cloud backup, this policy will be updated before they are released.</p>
+    <p>If this policy changes, the updated version will be posted on this page with a new effective date.</p>
 
     <h2>Contact</h2>
     <p>Questions or requests about privacy: email <a href="mailto:deskpulse.assistant@outlook.com">deskpulse.assistant@outlook.com</a>.</p>
   </article>
 
   <article id="ar" lang="ar" dir="rtl" hidden>
-    <p class="muted">محدّثة لنسخة 1.1 · تاريخ السريان: ١٧ أكتوبر ٢٠٢٦ · ينطبق على تطبيق DeskPulse لأندرويد وiOS</p>
+    <p class="muted">محدّثة لنسخة 1.4 · تاريخ السريان: <span class="eff">21 أكتوبر 2026</span> · ينطبق على تطبيق DeskPulse لأندرويد وiOS</p>
 
-    <div class="card"><strong>باختصار:</strong> DeskPulse يحتفظ بكل بياناتك على موبايلك بس. مفيش عندنا سيرفرات ولا حسابات ولا إعلانات ولا تحليلات. ومش بنبيع ولا بنشارك ولا بنرفع بياناتك أبدًا.</div>
+    <div class="card"><strong>باختصار:</strong> تسجيل الدخول اختياري. من غيره، كل حاجة بتفضل على موبايلك زي الأول. ولو سجّلت دخول بحساب Google، تقدّمك بيتحفظ في حسابك على DeskPulse عشان تكمّل على موبايل تاني. مفيش إعلانات ولا تحليلات، ومش بنبيع ولا بنشارك بياناتك أبدًا.</div>
 
-    <h2>التطبيق بيحفظ إيه، وفين</h2>
-    <p>كل البيانات بتتحفظ في مساحة التطبيق الخاصة على جهازك فقط:</p>
+    <h2>التطبيق بيحفظ إيه على موبايلك</h2>
+    <p>سواء سجّلت دخول أو لأ، التطبيق بيحفظ بياناتك في مساحته الخاصة على جهازك:</p>
     <div class="scroll"><table>
       <tr><th>البيانات</th><th>ليه</th></tr>
-      <tr><td>استراحات الحركة (الوقت، المدة، التمارين، السعرات التقديرية، الخطوات أثناء الاستراحة)</td><td>عشان نعرض السجل والسلسلة والشارات وتقدمك</td></tr>
+      <tr><td>استراحات الحركة (الوقت، المدة، التمارين، السعرات التقديرية، الخطوات أثناء الاستراحة)</td><td>عشان نعرض السجل والستريك والـXP والشارات وتقدّمك</td></tr>
       <tr><td>الملف الشخصي اللي بتدخله: الاسم، الوزن، الطول، السن، النوع (كلها اختيارية)</td><td>عشان نحسب السعرات بدقة أكبر</td></tr>
-      <tr><td>الإعدادات: نوع التذكير والمدة، ساعات وأيام الشغل، اللغة</td><td>عشان نفكرك في الوقت المناسب</td></tr>
-      <tr><td>سجل التذكيرات (ظهر، اتأجل، اتبدأ)</td><td>لتوقيت التذكيرات وعرض الإحصائيات</td></tr>
+      <tr><td>الإعدادات: نوع التذكير والمدة، ساعات وأيام الشغل، اللغة، أشكال بولس</td><td>عشان نفكّرك في الوقت المناسب ونعرض بولس بتاعك</td></tr>
+      <tr><td>سجل التذكيرات (ظهر، اتأجل، اتبدأ)، دروع الستريك، أيام برامج الراحة</td><td>لتوقيت التذكيرات وعرض الإحصائيات</td></tr>
     </table></div>
+
+    <h2>لو سجّلت دخول (اختياري)</h2>
+    <p>تقدر تسجّل دخول بحساب Google من الإعدادات أو لما تبدأ الأسبوع المجاني. ساعتها DeskPulse بيحفظ كمان الحاجات دي في حسابك عشان ترجع على الموبايل ده أو على موبايل تاني:</p>
+    <div class="scroll"><table>
+      <tr><th>البيانات</th><th>ليه</th></tr>
+      <tr><td>من حساب Google بتاعك: اسمك وإيميلك ورقم تعريف حساب Google</td><td>عشان نعمل حسابك على DeskPulse ونعرفك لما تسجّل دخول</td></tr>
+      <tr><td>استراحاتك وسجلّك (الوقت، المدة، التمارين، السعرات التقديرية حسب الوقت)، والـXP، والستريك، والشارات، ودروع الستريك، وتقدّمك في برامج الراحة، وأشكال بولس وأوضته، وسجل التذكيرات، وملفك الشخصي وإعداداتك. ومفيش أي حاجة جاية من Health Connect أو Apple Health: عدد الخطوات، والسعرات المحسوبة من الخطوات، والمشي اللي DeskPulse سجّله من خطواتك، كلهم بيفضلوا على موبايلك.</td><td>عشان تقدّمك يفضل محفوظ وتكمّل على موبايل تاني</td></tr>
+      <tr><td>الموبايلات اللي على حسابك: رقم عشوائي بيعمله التطبيق، وماركة الموبايل وكود الموديل (مثلًا "موبايل HONOR (MBH-N49)")، وآخر مرة اتحفظ فيها. أبدًا مش اسم موبايلك.</td><td>عشان نعرض "الموبايلات اللي على الحساب ده"</td></tr>
+    </table></div>
+    <ul>
+      <li><b>فين:</b> حسابك محفوظ عند مزوّد قاعدة البيانات بتاعنا Supabase، على سيرفرات في أيرلندا (الاتحاد الأوروبي). البيانات متشفّرة وهي بتتنقل (HTTPS). وكل حساب بيقدر يقرا بياناته هو بس.</li>
+      <li><b>لحد إمتى:</b> لحد ما تمسح حسابك (شوف "مسح بياناتك" تحت).</li>
+      <li><b>تسجيل الخروج</b> بيسيب تقدّمك على الموبايل ويوقف حفظه في حسابك.</li>
+    </ul>
+
+    <h2>الأسبوع المجاني لـ Pro (7 أيام)</h2>
+    <p>كل حساب وكل موبايل ليه أسبوع مجاني واحد، ولازم تسجّل دخول عشان تبدأه. عشان نعرف الموبايل، التطبيق بيستخدم حاجتين مش رقم الجهاز الحقيقي:</p>
+    <ul>
+      <li>رقم عشوائي بيعمله التطبيق ويتحفظ في Block Store بتاع Google على موبايلك، و</li>
+      <li>نسخة متلخبطة باتجاه واحد من رقم أندرويد الخاص بالتطبيق على الموبايل ده. الرقم نفسه عمره ما بيخرج من موبايلك، ومينفعش يترجع من النسخة المتلخبطة.</li>
+    </ul>
+    <p>لما الأسبوع المجاني يبدأ، الحاجتين دول ومعاهم تاريخ البداية والنهاية بيتحفظوا مع حسابك. ولو مسحت حسابك بعد كده، بيفضل بس الرقم المتلخبط ويوم بداية الأسبوع المجاني، من غير أي ربط بأي حساب، عشان نفس الموبايل مياخدش أسبوع مجاني تاني. ومفيش أي فلوس بتتسحب لما الأسبوع المجاني يخلص.</p>
 
     <h2>الخطوات من Health Connect (أندرويد) وApple Health (iOS)</h2>
     <p>لو شغّلت تتبع الخطوات، التطبيق بيطلب إذن <b>قراءة عدد خطواتك</b> بس. مش بيقرا أي بيانات صحية تانية، ومش بيكتب أي حاجة في Health Connect أو Apple Health.</p>
     <ul>
-      <li>الخطوات بتُستخدم فقط لتأكيد استراحات المشي، وتسجيل المشي اللي عملته من غير التطبيق، وعشان مانفكركش بعد ما اتحركت على طول.</li>
-      <li>لو سمحت بالوصول في الخلفية، التطبيق بيقرا الخطوات كل ١٥ دقيقة تقريبًا وهو مقفول، لنفس الأغراض.</li>
-      <li>بيانات الخطوات بتفضل على جهازك. مابتتنقلش لينا ولا لأي حد، ومابتتستخدمش في الإعلانات، ولا في تحديد أهلية الائتمان أو التأمين.</li>
+      <li>الخطوات بتُستخدم فقط لتأكيد استراحات المشي، وتسجيل المشي اللي عملته من غير التطبيق، وعشان مانفكّركش بعد ما اتحركت على طول.</li>
+      <li>لو سمحت بالوصول في الخلفية، التطبيق بيقرا الخطوات كل 15 دقيقة تقريبًا وهو مقفول، لنفس الأغراض.</li>
+      <li>بيانات الخطوات بتفضل على جهازك، حتى لو سجّلت دخول. مابتتنقلش لينا ولا لأي حد، ومابتتستخدمش في الإعلانات، ولا في تحديد أهلية الائتمان أو التأمين.</li>
       <li>استخدام DeskPulse للمعلومات من Health Connect ملتزم بـ<a href="https://support.google.com/googleplay/android-developer/answer/12991134">سياسة أذونات Health Connect</a>، بما فيها شروط الاستخدام المحدود.</li>
     </ul>
 
@@ -136,37 +189,46 @@
     <p>لو شغّلت <b>تذكير يراعي الاجتماعات</b>، التطبيق بيطلب إذن قراءة التقويم بس. بيقرا <b>مواعيد بداية ونهاية</b> الأحداث المعلّمة "مشغول" بس، عشان يأجل التذكير لحد ما الاجتماع يخلص. مش بيقرا عناوين الأحداث ولا تفاصيلها ولا أماكنها ولا الحضور، ومش بيحفظ ولا يغيّر ولا يشارك أي بيانات من التقويم. تقدر تقفل الميزة أو تسحب الإذن في أي وقت.</p>
 
     <h2>الشراء (DeskPulse Pro)</h2>
-    <p>DeskPulse Pro شراء مرة واحدة وGoogle Play هو اللي بيتعامل معاه بالكامل. إحنا عمرنا ما بنشوف ولا بنستلم بيانات الدفع بتاعتك. التطبيق بيسأل Google Play بس، على جهازك، هل حساب جوجل ده عنده Pro عشان يفتح المميزات.</p>
+    <p>DeskPulse Pro شراء مرة واحدة وGoogle Play هو اللي بيتعامل معاه بالكامل. إحنا عمرنا ما بنشوف ولا بنستلم بيانات الدفع بتاعتك. التطبيق بيسأل Google Play بس، على جهازك، هل حساب Google Play بتاعك عنده Pro عشان يفتح المميزات.</p>
 
     <h2>الإشعارات والمنبهات</h2>
-    <p>التطبيق بيستخدم الإشعارات لتذكيرات الاستراحة، وإذن "المنبهات والتذكيرات" عشان توصل في معادها. كل ده بيتجدول على جهازك بس.</p>
+    <p>التطبيق بيستخدم الإشعارات لتذكيرات الاستراحة (ومع Pro: تذكيرات اختيارية للعين والقعدة، وتذكير قبل نهاية الأسبوع المجاني بيوم)، وإذن "المنبهات والتذكيرات" عشان توصل في معادها. كل ده بيتجدول على جهازك بس.</p>
 
     <h2>ودجت الشاشة الرئيسية</h2>
-    <p>الودجت بتعرض تقدمك من التخزين المحلي للتطبيق، وتسجيل استراحة من الودجت بيتحفظ في نفس المكان.</p>
+    <p>الودجت بتعرض تقدّمك من التخزين المحلي للتطبيق، وتسجيل استراحة من الودجت بيتحفظ في نفس المكان (وفي حسابك لو مسجّل دخول).</p>
+
+    <h2>مزوّدي الخدمة</h2>
+    <ul>
+      <li><b>Supabase</b> بيحفظ الحسابات والتقدّم المحفوظ لينا (أيرلندا، الاتحاد الأوروبي).</li>
+      <li><b>Google</b> بيقدّم تسجيل الدخول، والشراء من Google Play، وBlock Store على موبايلك.</li>
+    </ul>
+    <p>بيتعاملوا مع البيانات بس عشان يقدّموا الخدمات دي. ومش بنبيع ولا بنشارك بياناتك مع أي حد تاني.</p>
 
     <h2>اللي مش بنعمله</h2>
     <ul>
-      <li>مفيش حساب ولا تسجيل دخول مطلوب.</li>
+      <li>مفيش حساب مطلوب: DeskPulse بيشتغل كامل من غير تسجيل دخول.</li>
       <li>مفيش إعلانات ولا تتبع ولا تحليلات ولا أدوات تقارير أعطال.</li>
       <li>مفيش وصول للموقع أو جهات الاتصال أو الكاميرا أو الميكروفون أو الملفات. التقويم بيتقري بس لو شغّلت التذكير اللي بيراعي الاجتماعات.</li>
-      <li>مفيش بيع أو مشاركة بيانات مع أي طرف تالت.</li>
+      <li>مفيش بيع أو مشاركة بيانات للإعلانات أو لأي غرض تاني.</li>
     </ul>
 
-    <h2>التحكم في بياناتك ومسحها</h2>
+    <h2>مسح بياناتك</h2>
     <ul>
-      <li><b>مسح كل حاجة:</b> الملف الشخصي ← مسح كل البيانات، أو امسح التطبيق. المسح فوري ونهائي لأن مفيش نسخة في أي مكان تاني.</li>
-      <li><b>تصدير:</b> الملف الشخصي ← نسخة احتياطية، بيشارك بياناتك كملف وانت تختار تبعته فين.</li>
+      <li><b>امسح حسابك:</b> الإعدادات ← حسابك ← امسح حسابي. حسابك وكل اللي محفوظ فيه بيتمسح على طول (ما عدا الرقم المتلخبط ويوم الأسبوع المجاني اللي اتكلمنا عنهم فوق). اللي على موبايلك بيفضل. ولو اشتريت Pro بيفضل مربوط بحساب Google Play بتاعك.</li>
+      <li><b>مش قادر تفتح التطبيق؟</b> ابعت إيميل على <a href="mailto:deskpulse.assistant@outlook.com">deskpulse.assistant@outlook.com</a> من الإيميل اللي سجّلت بيه، والعنوان <bdi dir="ltr">"Delete my DeskPulse account"</bdi>. هنمسح حسابك وكل تقدّمك المحفوظ خلال 30 يوم. شوف <a href="https://deskpulseapp.github.io/delete-account/#ar">deskpulseapp.github.io/delete-account</a>.</li>
+      <li><b>امسح اللي على موبايلك:</b> الإعدادات ← النسخة الاحتياطية والخصوصية ← مسح كل البيانات، أو امسح التطبيق. لو مسجّل دخول، مسح كل البيانات بيعمل تسجيل خروج الأول وحسابك بيفضل محتفظ بتقدّمك.</li>
+      <li><b>تصدير:</b> الإعدادات ← النسخة الاحتياطية والخصوصية ← نسخة احتياطية، بيشارك بياناتك كملف وانت تختار تبعته فين.</li>
       <li><b>سحب الأذونات</b> في أي وقت من Health Connect أو Apple Health أو إعدادات الموبايل.</li>
     </ul>
 
     <h2>الأطفال</h2>
-    <p>DeskPulse معمول للكبار في الشغل، ومش موجه للأطفال أقل من ١٣ سنة.</p>
+    <p>DeskPulse معمول للكبار في الشغل، ومش موجّه للأطفال أقل من 13 سنة.</p>
 
     <h2>تنبيه صحي</h2>
-    <p>DeskPulse بيقدم تذكيرات وتقديرات عامة للصحة. مش جهاز طبي ومابيقدمش نصايح طبية.</p>
+    <p>DeskPulse بيقدّم تذكيرات وتقديرات عامة للصحة. مش جهاز طبي ومابيقدّمش نصايح طبية.</p>
 
     <h2>التغييرات</h2>
-    <p>لو السياسة دي اتغيرت، النسخة الجديدة هتتنشر في الصفحة دي بتاريخ سريان جديد. ولو نسخة جاية ضافت تسجيل دخول أو نسخ احتياطي سحابي، السياسة هتتحدث قبل نزولها.</p>
+    <p>لو السياسة دي اتغيرت، النسخة الجديدة هتتنشر في الصفحة دي بتاريخ سريان جديد.</p>
 
     <h2>التواصل</h2>
     <p>للأسئلة أو الطلبات الخاصة بالخصوصية: ابعت إيميل على <a href="mailto:deskpulse.assistant@outlook.com">deskpulse.assistant@outlook.com</a>.</p>
